@@ -1,8 +1,12 @@
 -module(meck_test_mocked).
 
+-export([some_fun/1]).
+
+-ifdef(TEST).
 -include_lib("eunit/include/eunit.hrl").
+-endif.
 
-
+-ifdef(TEST).
 some_fun_test_() ->
   {setup,
     fun() ->
@@ -13,11 +17,12 @@ some_fun_test_() ->
     end,
     fun(Input) ->
       [ fun() ->
-         banana = some_fun(Input)
+         banana = ?debugVal(some_fun(Input))
         end
       ]
     end
   }.
+-endif.
 
 some_fun(SomeInput) ->
   timer:sleep(1),
