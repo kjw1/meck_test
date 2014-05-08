@@ -1,0 +1,12 @@
+{application, meck_test,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { meck_test_app, []}},
+  {env, []}
+ ]}.

@@ -1,0 +1,6 @@
+ebin
+deps
+rel/meck_test
+.eunit
+eunit.*
+*.swp
