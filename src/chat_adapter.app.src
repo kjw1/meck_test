@@ -1,4 +1,4 @@
-{application, meck_test,
+{application, chat_adapter,
  [
   {description, ""},
   {vsn, "1"},
@@ -7,6 +7,6 @@
                   kernel,
                   stdlib
                  ]},
-  {mod, { meck_test_app, []}},
+  {mod, { chat_adapter_app, []}},
   {env, []}
  ]}.

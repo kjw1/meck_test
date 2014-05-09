@@ -1,4 +1,4 @@
--module(meck_test_app).
+-module(chat_adapter_app).
 
 -behaviour(application).
 
@@ -10,7 +10,8 @@
 %% ===================================================================
 
 start(_StartType, _StartArgs) ->
-    meck_test_sup:start_link().
+  chat_adapter_sup:start_link().
 
 stop(_State) ->
-    ok.
+  ok.
+
